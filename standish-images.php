@@ -1,0 +1,9 @@
+<img src="../img/Standish-1.jpg" id="Standish-1" width="" height="1650px" />
+<img src="../img/Standish-2.jpg" id="Standish-2" width="100%" height="" />
+<img src="../img/Standish-3.jpg" id="Standish-3" width="100%" height="" />
+<img src="../img/Standish-4.jpg" id="Standish-4" width="100%" height="" />
+<img src="../img/Standish-5.jpg" id="Standish-5" width="100%" height="" />
+<img src="../img/Standish-6.jpg" id="Standish-6" width="100%" height="" />
+<img src="../img/Standish-7.jpg" id="Standish-7" width="100%" height="" />
+<img src="../img/Standish-8.jpg" id="Standish-8" width="100%" height="" />
+<img src="../img/Standish-9.jpg" id="Standish-9" width="100%" height="" />

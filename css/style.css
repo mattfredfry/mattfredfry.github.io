@@ -20,4 +20,5 @@ main {
 .grid-item {
   display: flex;
   flex-direction: column;
+  border-top: 1px dotted grey;
 }

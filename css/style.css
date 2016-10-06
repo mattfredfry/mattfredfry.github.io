@@ -1,0 +1,23 @@
+
+body {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}

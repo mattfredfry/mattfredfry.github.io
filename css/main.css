@@ -17,7 +17,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   color: #202020;
-  font: 16px/18px 'Source Serif Pro', serif;
+  font: 1.2rem/1.2 serif;
   background-color: #fbfbfb;
 }
 
@@ -89,9 +89,19 @@ header {
   padding: 20px 0;
 }
 
+.grid-img {
+  width: 306px;
+  height: 300px;
+  border: 2px solid transparent;
+  filter: brightness(0.9);
+}
+
+.grid-img:hover {
+  border: 2px solid #4298A9;
+}
+
 .grid-text {
   color: #666;
-  font-size: 1.2em;
   max-width: 300px;
   padding: 10px 0 0;
 }
@@ -121,6 +131,7 @@ footer .grid-item {
   margin-top: .5em;
   color: #000 !important;
   font-weight: bold;
+  font-family: "Source Serif Pro", serif;
   }
 
 .contact-info a:hover {
@@ -135,7 +146,7 @@ footer .grid-item {
   fill: #000;
   height: 24px;
   width: 24px;
-  margin: 0 0 0 3%;
+  margin: 0 3% 0 0;
 }
 
 .icon:hover {

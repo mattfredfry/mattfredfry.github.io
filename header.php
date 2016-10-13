@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>Matt Fry</title>
 	<meta name="description" content="Matt Fry is a writer and thinker who also dabbles in web development and design. He lives in Dallas, TX and this is his website.">
@@ -10,18 +9,20 @@
 	<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 	<script src="../js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script src="../js/jquery.localscroll-1.2.7-min.js"></script>
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
-
-	<?php include_once("../ga.php") ?>
-	
+  	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Alegreya+SC:400,700" rel="stylesheet" type="text/css">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KBF3XN');</script>
+	<!-- End Google Tag Manager -->
 	</head>
 <body id="Home">
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBF3XN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-	
 <div class="body-container">
 	<div class="interior-header">
 		<div id="intro">

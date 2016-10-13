@@ -130,3 +130,14 @@ footer .grid-item {
 .contact-info img {
   padding: 0 0 0 3%;
 }
+
+.icon {
+  fill: #000;
+  height: 24px;
+  width: 24px;
+  margin: 0 0 0 3%;
+}
+
+.icon:hover {
+  fill: #4298A9;
+}

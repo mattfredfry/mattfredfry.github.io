@@ -1,0 +1,6 @@
+AddHandler application/x-httpd-php54 .php
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+Redirect 301 /resume.pdf http://mattfredfry.com/matt-fred-fry-resume.pdf

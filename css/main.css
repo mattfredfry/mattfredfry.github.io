@@ -122,6 +122,8 @@ footer .grid-item {
   height: 24px;
   width: 24px;
   margin: 0 3% 0 0;
+  max-height: 24px;
+  max-width: 24px;
 }
 
 .icon:hover {
@@ -286,19 +288,43 @@ small {
   padding: 20px 0 0 0;
 }
 
+@media screen and (max-width: 1155px) {
+  footer {
+    bottom: initial;
+  }
+  main {
+    margin: 0;
+  }
+  footer .grid-item {
+    max-width: 33%;
+    padding: 40px 10px 0 0;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .contact-info a {
+    font-size: 24px;
+  }
+}
 
+@media screen and (max-width: 840px) {
+  footer .grid-item {
+    max-width: 100%;
+  }
+  .page main {
+    flex-direction: column;
+  }
+  .left-col,.right-col {
+    max-width: initial;
+    padding: 0;
+    width: 100%;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 420px) {
+  .grid-img {
+      width: 100%;
+      height: auto;
+      max-width: 306px;
+    }
+}

@@ -191,7 +191,7 @@ input[type=checkbox] {
   color:aqua;
 }
 .sep {
-    display: inline;
+    display: inherit;
   }
 .break {
     display: none;
@@ -201,7 +201,7 @@ input[type=checkbox] {
     display: none;
   }
   .break {
-    display: inline;
+    display: inherit;
   }
 }
 @media (max-width:620px) {

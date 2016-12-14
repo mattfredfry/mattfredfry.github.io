@@ -191,7 +191,7 @@ input[type=checkbox] {
   color:aqua;
 }
 .sep {
-    display: inherit;
+    display: inline;
   }
 .break {
     display: none;
@@ -201,7 +201,7 @@ input[type=checkbox] {
     display: none;
   }
   .break {
-    display: inherit;
+    display: inline;
   }
 }
 @media (max-width:620px) {
@@ -1435,17 +1435,17 @@ input[type=checkbox] {
 }
 .standard-resume .secondary {
     color: #96999b;
-    display: -webkit-box;
+    /*display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: left;
     -webkit-justify-content: left;
     -ms-flex-pack: left;
-    justify-content: left;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    justify-content: left;
 }
 .standard-resume .secondary .separator {
     padding: 0 6px;

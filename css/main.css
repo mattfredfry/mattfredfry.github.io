@@ -254,7 +254,7 @@ header {
 
 .info ul {
   list-style: none;
-  padding-left: 15px;
+  padding: 0 0 15px 15px;
   font-style: italic;
 }
 

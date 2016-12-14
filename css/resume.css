@@ -190,6 +190,20 @@ input[type=checkbox] {
 .email:hover {
   color:aqua;
 }
+.sep {
+    display: inline;
+  }
+.break {
+    display: none;
+  }
+@media (max-width:480px) {
+  .sep {
+    display: none;
+  }
+  .break {
+    display: inline;
+  }
+}
 @media (max-width:620px) {
     .editor-content, .inner-wrap, .privacy-policy-wrap, .settings-wrap, .standard-resume .sr-section, .standard-resume>header {
     width: auto;

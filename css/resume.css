@@ -1835,10 +1835,19 @@ input[type=checkbox] {
 @media print {
 body {
     font-size: 14px !important;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#skills {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .standard-resume {
     margin-top: -0px !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .standard-resume .sr-section h2 {
@@ -1884,9 +1893,7 @@ header > p > a {
 }
 
 .c-main-logo.resume {
-    background: 0 0!important;
-    border: 2px solid #000;
-    display: none;
+    display: none!important;
 }
 .menus-wrap, .preview-top-bar {
     display: none!important;
@@ -1898,7 +1905,6 @@ header > p > a {
     margin-bottom: 10px!important;
 }
 .sr-section.print-contact {
-    display: block!important;
     display: none!important;
 }
 .sr-section.print-contact .contact-block {
@@ -1906,24 +1912,19 @@ header > p > a {
     display: none!important;
 }
 .sr-section.print-contact .contact-block:after, .sr-section.print-contact .contact-block:before {
-    content: "";
-    display: table;
     display: none!important;
 }
 .sr-section.print-contact .contact-block:after {
     clear: both;
 }
 .sr-section.print-contact .contact-block>div {
-    float: left;
     display: none!important;
 }
 .sr-section.print-contact .contact-block .contact-label {
-    width: 120px;
     display: none!important;
 
 }
 .footer-logo-wrap {
-    margin-top: 60px!important;
     display: none!important;
 
 }

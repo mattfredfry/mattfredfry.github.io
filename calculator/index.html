@@ -16,8 +16,8 @@
       <h2>Circumference</h2>
       <div class="calc">
        <p class="q">Enter: 
-         <input type="number" property="radius" class="radius"/> or 
-         <input type="number" property="diameter" class="diameter"/>
+         <input type="number" property="radius" placeholder="[if(radius, radius, if(diameter, diameter / 2, 'radius'))]" class="radius"/> or 
+         <input type="number" property="diameter" placeholder="[if(diameter, diameter, if(radius, radius * 2, 'diameter'))]" class="diameter"/>
         </p>
        <p class="a">Circumference = 
          <span class="answer circ" property="circumference" content="&nbsp;"></span>

@@ -46,7 +46,7 @@
           <p class="q">Old: <input type="number" id="numerator" property="ow" placeholder="width"/> x <input type="number" id="denominator"  property="oh" placeholder="height"/></p>
           <p class="q">New: <input type="number" property="nw" value="[if((ow / oh) * nh > 0, (ow / oh) * nh, '')]" /> x <input type="number" property="nh" value="[if((oh / ow) * nw > 0, (oh / ow) * nw, '')]"/></p>
         </div>
-        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left" style="height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px; line-height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px">Aspect ratio: <span id="output1"></span></div>
+        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left" style="height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px; line-height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px">Aspect ratio: <span id="output"></span></div>
       </div>
     </div>
     <div class="mv-bar"></div>
@@ -76,7 +76,7 @@
         var numerator = document.getElementById("numerator").value;
         var denominator = document.getElementById("denominator").value;
         var fraction = reduce([numerator, denominator]);
-        document.getElementById("output1").textContent = fraction[0] + ":" + fraction[1];
+        document.getElementById("output").textContent = fraction[0] + ":" + fraction[1];
       });
     </script>
   </body>

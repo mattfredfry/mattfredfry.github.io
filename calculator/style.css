@@ -79,6 +79,16 @@ input:focus {
   margin-bottom: 40px;
 }
 
+.box {
+  border: solid 2px blue;
+  width:200px;
+  text-align: center;
+}
+
+#output1 {
+  font-weight: 500;
+}
+
 .mv-bar {
   margin-top: 40px;
 }
@@ -100,6 +110,30 @@ button:hover {
 .hidden {
   display: none!important;
   visibility: hidden!important;
+}
+
+.cf:before,.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+.one {
+  width: 25%;
+}
+
+.two {
+  width: 50%;
+}
+
+.three {
+  width: 75%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 @media only screen and (max-device-width: 620px) {

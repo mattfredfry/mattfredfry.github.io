@@ -85,6 +85,38 @@ input:focus {
   text-align: center;
 }
 
+.circle {
+  border-radius: 50%;
+  border: solid 2px blue;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(ellipse at center, blue 4px, transparent 0px), linear-gradient(180deg, transparent 49.75%, blue 0, transparent 51%);
+  line-height: 32px;
+}
+
+.label {
+  position: relative;
+  top: 69px;
+}
+
+.rad-label {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.dia-label {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.circ-label {
+  position: relative;
+  bottom: 75px;
+  right: 50px;
+}
+
 #output {
   font-weight: 500;
 }

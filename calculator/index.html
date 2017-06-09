@@ -14,14 +14,23 @@
     <h1>Calculators!</h1>
     <div class="block">
       <h2>Circumference</h2>
-      <div class="calc">
-       <p class="q">Enter: 
-         <input type="number" property="radius" class="radius"/> or 
-         <input type="number" property="diameter" class="diameter"/>
-        </p>
-       <p class="a">Circumference = 
-         <span class="answer circ" property="circumference" content="&nbsp;"></span>
-       </p>
+      <div class="calc cf">
+        <div class="three left">
+         <p class="q">Enter: 
+           <input type="number" property="radius" class="radius"/> or 
+           <input type="number" property="diameter" class="diameter"/>
+          </p>
+         <p class="a">Circumference = 
+           <span class="answer circ" property="circumference" content="&nbsp;"></span>
+         </p>
+        </div>
+        <div class="one left">
+          <div class="circle">
+            <span class="rad-label label">r = <span class="rad">radius</span></span>
+            <span class="dia-label label">d = <span class="dia">diameter</span></span>
+            <span class="circ-label">c = <span class="circ">circumference</span></span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="block">
@@ -56,11 +65,15 @@
         var dia = $(this).val();
         $('.radius').val(dia / 2);
         $('.circ').text(dia * 3.14);
+        $('.rad').text(dia / 2);
+        $('.dia').text(dia);
       });
        $('.radius').on('change or keyup', function(){
          var rad = $(this).val();
          $('.diameter').val(rad * 2);
          $('.circ').text(rad * 2 * 3.14);
+         $('.dia').text(rad * 2);
+         $('.rad').text(rad);
       });
 
       function reduce(fraction) {

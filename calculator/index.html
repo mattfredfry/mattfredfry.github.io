@@ -55,7 +55,8 @@
           <p class="q">Old: <input type="number" id="numerator" property="ow" placeholder="width"/> x <input type="number" id="denominator"  property="oh" placeholder="height"/></p>
           <p class="q">New: <input type="number" property="nw" value="[if((ow / oh) * nh > 0, (ow / oh) * nh, '')]" /> x <input type="number" property="nh" value="[if((oh / ow) * nw > 0, (oh / ow) * nw, '')]"/></p>
         </div>
-        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left" style="height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px; line-height:[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]px">Aspect ratio: <span id="output"></span></div>
+        <meta property="height" mv-value="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" />
+        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left" style="height:[height]px; line-height:[height]px">Aspect ratio: <span id="output"></span></div>
       </div>
     </div>
     <div class="mv-bar"></div>

@@ -37,6 +37,7 @@ input {
   padding: 2px 0;
   font-size: inherit;
   max-width: 20%;
+  min-width: 90px;
   border-bottom: 1px solid;
   border-top: 0px hidden;
   border-right: 0px hidden;
@@ -160,7 +161,6 @@ button:hover {
   width: 73%;
 }
 
-
 .left {
   float: left;
 }
@@ -168,36 +168,55 @@ button:hover {
 .right {
   float: right;
 }
+@media only screen and (max-width: 1200px) {
+  .radius,.diameter {
+    font-size: .75em;
+  }
+}
 
-@media only screen and (max-device-width: 620px) {
+@media only screen and (max-width: 800px) {
   body {
     width: 90%;
+    margin: 40px auto;
   }
-  p {font-size: 3em; margin: .75em 0;}
+ .two, .three {
+    width: 90%;
+  }
+  .one {
+    margin: 0 auto;
+    width: 30%;
+  }
+  .left {
+    float: none!important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 90%;
+    margin: 40px auto;
+  }
+  p {font-size: 1.25em; margin: .75em 0;}
 
   h1 {
-    font-size: 6em;
+    font-size: 3.25em;
   }
 
   h2 {
-    font-size: 4em;
+    font-size: 2.25em;
   }
 
   h3 {
-    font-size: 3.25em;
+    font-size: 1.75em;
   }
   button {
     padding: 10px 18px;
     border-radius: 10px;
     border: 2px solid gray;
-    font-size: 3em;
+    font-size: 1.25em;
     margin: 0 40px 0 0;
   }
-}
-
-@media only screen and (max-width: 620px) {
-  body {
-    width: 90%;
-    margin: 40px auto;
+  .mv-bar {
+    text-align: center;
   }
 }

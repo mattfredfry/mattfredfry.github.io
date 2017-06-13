@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Calculators! | Circumferance, Percentage, &amp; Aspect Ratio</title> 
   <script src="https://dev.mavo.io/dist/mavo.js"></script>
   <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
@@ -12,51 +13,74 @@
 </head>
   <body mv-app="calculators" mv-storage="local" mv-bar="status edit save clear logout">
     <h1>Calculators!</h1>
-    <div class="block">
-      <h2>Circumference</h2>
+    <div id="circumference" class="block circumference">
+      <h2 class="circumference-title"><a href="#circumference">Circumference</a></h2>
       <div class="calc cf">
         <div class="three left">
-         <p class="q">Enter: 
+         <p class="q"><span class="q-text">Enter: </span>
            <input type="number" property="radius" class="radius" placeholder="radius"/> or 
            <input type="number" property="diameter" class="diameter" placeholder="diameter"/>
           </p>
-         <p class="a">Circumference = 
-           <span class="answer circ" property="circumference" content="&nbsp;"></span>
+          <p class="a"><span class="circ-hover">Circumference = 
+           <span class="answer circ" property="circumference" content="&nbsp;"></span></span>
          </p>
         </div>
-        <div class="one left">
+        <div class="one left circle-container">
           <div class="circle">
+            <svg width="204" height="204" xmlns="http://www.w3.org/2000/svg">
+             <g>
+              <title>background</title>
+              <rect x="-1" y="-1" width="206" height="206" id="canvas_background" fill="none"/>
+              <g id="canvasGrid" display="none">
+               <rect id="svg_2" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+              </g>
+             </g>
+             <g>
+              <title>Circumference Diagram</title>
+               <g class="svg-diameter">
+                 <line x1="1" y1="101" x2="201" y2="101" id="svg-dia-line" stroke-linejoin="undefined" stroke-linecap="undefined"/>
+                 <ellipse stroke-width="0" cx="100" cy="101" id="svg-dia-cent" rx="4" ry="4"/>
+               </g>
+               <line x1="1" y1="101" x2="201" y2="101" class="svg-dia-fat" stroke-linejoin="undefined" stroke-linecap="undefined"/>
+               <g class="svg-radius">
+                 <line x1="1" y1="101" x2="101" y2="101" id="svg-rad-line" stroke-linejoin="undefined" stroke-linecap="undefined"/>
+                 <ellipse stroke-width="0" cx="100" cy="101" id="svg-rad-cent" rx="4" ry="4"/>
+               </g>
+               <line x1="1" y1="101" x2="101" y2="101" class="svg-rad-fat" stroke-linejoin="undefined" stroke-linecap="undefined"/>
+               <ellipse class="svg-circumference" cx="102" cy="102" rx="100" ry="100"/>
+               <ellipse class="svg-circ-fat" cx="102" cy="102" rx="100" ry="100"/>
+             </g>
+            </svg>
+            <span class="circ-label">c = <span class="circ">circumference</span></span>
             <span class="rad-label label">r = <span class="rad">radius</span></span>
             <span class="dia-label label">d = <span class="dia">diameter</span></span>
-            <span class="circ-label">c = <span class="circ">circumference</span></span>
           </div>
         </div>
       </div>
     </div>
-    <div class="block">
-      <h2>Percentages</h2>
+    <div id="percentages" class="block percentages">
+      <h2 class="percentages-title"><a href="#percentages">Percentages</a></h2>
       <div class="calc">
-        <p class="q">What is <input type="number" property="a" value=""/>% of <input type="number" property="b" value=""/>?</p>
+        <p class="q"><span class="q-text">What is </span><input type="number" class="q-num" property="a" value="" placeholder="this"/>% of <input type="number" property="b" value="" placeholder="this"/>?</p>
         <p class="a">Answer = <span class="answer" property="ab">[if(a / 100 * b, a / 100 * b, "&nbsp;")]</span></p>
       </div>
       <div class="calc">
-        <p class="q"><input type="number" property="c" value=""/> is what percent of <input type="number" property="d" value=""/>?</p>
+        <p class="q"><input type="number" class="q-num" property="c" value="" placeholder="this"/><span class="q-text"> is what percent of </span><input type="number" class="q-num" property="d" value="" placeholder="this"/>?</p>
         <p class="a">Answer = <span class="answer" property="cd">[if(!Number.isNaN(c / d * 100), c / d * 100 & "%","&nbsp;")]</span></p>
       </div>
       <div class="calc">
-        <p class="q">What is the percentage change from <input type="number" property="e" value=""/> to <input type="number" property="f" value=""/>?</p>
+        <p class="q"><span class="q-text">What is the percentage change from </span><input type="number" class="q-num" property="e" value="" placeholder="this"/> to <input type="number" class="q-num" property="f" value="" placeholder="this"/>?</p>
         <p class="a">Answer = <span class="answer" property="ef">[if(!Number.isNaN(((f - e) / e) * 100), ((f - e) / e) * 100 & "%","&nbsp;")]</span></p>
       </div>
     </div>
-    <div class="block">
-      <h2>Aspect Ratio</h2>
+    <div id="aspect-ratio" class="block aspect-ratio">
+      <h2 class="aspect-ratio-title"><a href="#aspect-ratio">Aspect Ratio</a></h2>
       <div class="calc cf">
         <div class="three left">
           <p class="q">Old: <input type="number" id="numerator" property="ow" placeholder="width"/> x <input type="number" id="denominator"  property="oh" placeholder="height"/></p>
           <p class="q">New: <input type="number" property="nw" value="[if((ow / oh) * nh > 0, (ow / oh) * nh, '')]" /> x <input type="number" property="nh" value="[if((oh / ow) * nw > 0, (oh / ow) * nw, '')]"/></p>
         </div>
-        <meta property="height" mv-value="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" />
-        
+        <meta property="height" mv-value="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" mv-default="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" />
         <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left one" style="height:[height]px; line-height:[height]px">Aspect ratio: <span id="output"></span></div>
       </div>
     </div>
@@ -93,6 +117,19 @@
         var fraction = reduce([numerator, denominator]);
         document.getElementById("output").textContent = fraction[0] + ":" + fraction[1];
       });
+      
+      $('.svg-circumference, .circ-label, .circ-hover, .svg-circ-fat').hover(
+        function(){
+          $('.svg-circumference').toggleClass('svg-circumference-hover')
+        });
+      $('.svg-radius, .rad-label, input.radius, .svg-rad-fat').hover(
+        function(){
+          $('.svg-radius').toggleClass('svg-radius-hover')
+        });
+      $('.svg-diameter, .dia-label, input.diameter, .svg-dia-fat').hover(
+        function(){
+          $('.svg-diameter').toggleClass('svg-diameter-hover')
+        });
     </script>
   </body>
 </html>

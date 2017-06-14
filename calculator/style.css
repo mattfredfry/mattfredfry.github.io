@@ -38,6 +38,14 @@ h2 a:hover {
   margin: 1.25em 0;
 }
 
+.a-text {
+  
+}
+
+.a-text:after {
+  /*content: 'test';*/
+}
+
 .cf .left .q:nth-child(1) {
   margin: .5em 0;
 }

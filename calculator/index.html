@@ -10,31 +10,20 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KBF3XN');</script>
-  <!-- End Google Tag Manager -->
 </head>
   <body mv-app="calculators" mv-storage="local" mv-bar="status edit save clear logout">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBF3XN"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <h1>Calculators!</h1>
     <div id="circumference" class="block circumference">
       <h2 class="circumference-title"><a href="#circumference">Circumference</a></h2>
       <div class="calc cf">
         <div class="three left">
          <p class="q"><span class="q-text">Enter: </span>
-           <input type="number" property="radius" class="radius" placeholder="radius"/> or 
-           <input type="number" property="diameter" class="diameter" placeholder="diameter"/>
+           <input type="number" property="radius" class="radius" placeholder="radius" mv-default="[if(radius, diameter / 2)]"/> or 
+           <input type="number" property="diameter" class="diameter" placeholder="diameter" mv-default="[if(diameter, radius * 2)]"/>
           </p>
-          <p class="a"><span class="circ-hover">Circumference = 
-           <span class="answer circ" property="circumference" content="&nbsp;"></span></span>
-         </p>
+          <p class="a">
+            <span class="circ-hover a-text">Circumference = </span>
+            <span class="answer circ-hover circ" property="circumference" mv-default="[if(radius = 0 or isNaN(radius), '&nbsp;', radius * 2 * PI)]"></span>
         </div>
         <div class="one left circle-container">
           <div class="circle">
@@ -62,9 +51,9 @@
                <ellipse class="svg-circ-fat" cx="102" cy="102" rx="100" ry="100"/>
              </g>
             </svg>
-            <span class="circ-label">c = <span class="circ">circumference</span></span>
-            <span class="rad-label label">r = <span class="rad">radius</span></span>
-            <span class="dia-label label">d = <span class="dia">diameter</span></span>
+            <span class="circ-label">c = <span class="circ" mv-default="[if(circumference, circumference,'circumference')]">[if(circumference = 0 or isNaN(circumference), 'circumference', circumference)]</span></span>
+            <span class="rad-label label">r = <span class="rad" mv-default="[if(radius, radius,'radius')]">[if(radius = 0 or isNaN(radius), 'radius', radius)]</span></span>
+            <span class="dia-label label">d = <span class="dia" mv-default="[if(diameter, diameter,'diameter')]">[if(diameter = 0 or isNaN(diameter), 'diameter', diameter)]</span></span>
           </div>
         </div>
       </div>
@@ -72,16 +61,16 @@
     <div id="percentages" class="block percentages">
       <h2 class="percentages-title"><a href="#percentages">Percentages</a></h2>
       <div class="calc">
-        <p class="q"><span class="q-text">What is </span><input type="number" class="q-num" property="a" value="" placeholder="this"/>% of <input type="number" property="b" value="" placeholder="this"/>?</p>
-        <p class="a">Answer = <span class="answer" property="ab">[if(a / 100 * b, a / 100 * b, "&nbsp;")]</span></p>
+        <p class="q"><span class="q-text">What is </span><input type="number" class="q-num" property="a" placeholder="this"/>% of <input type="number" property="b" value="" placeholder="this"/>?</p>
+        <p class="a"><span class="a-text">Answer = </span><span class="answer" property="ab">[if(a / 100 * b, a / 100 * b, "&nbsp;")]</span></p>
       </div>
       <div class="calc">
-        <p class="q"><input type="number" class="q-num" property="c" value="" placeholder="this"/><span class="q-text"> is what percent of </span><input type="number" class="q-num" property="d" value="" placeholder="this"/>?</p>
-        <p class="a">Answer = <span class="answer" property="cd">[if(!Number.isNaN(c / d * 100), c / d * 100 & "%","&nbsp;")]</span></p>
+        <p class="q"><input type="number" class="q-num" property="c" placeholder="this"/><span class="q-text"> is what percent of </span><input type="number" class="q-num" property="d" value="" placeholder="this"/>?</p>
+        <p class="a"><span class="a-text">Answer = </span><span class="answer" property="cd">[if(!Number.isNaN(c / d * 100), c / d * 100 & "%","&nbsp;")]</span></p>
       </div>
       <div class="calc">
-        <p class="q"><span class="q-text">What is the percentage change from </span><input type="number" class="q-num" property="e" value="" placeholder="this"/> to <input type="number" class="q-num" property="f" value="" placeholder="this"/>?</p>
-        <p class="a">Answer = <span class="answer" property="ef">[if(!Number.isNaN(((f - e) / e) * 100), ((f - e) / e) * 100 & "%","&nbsp;")]</span></p>
+        <p class="q"><span class="q-text">What is the percentage change from </span><input type="number" class="q-num" property="e" placeholder="this"/> to <input type="number" class="q-num" property="f" value="" placeholder="this"/>?</p>
+        <p class="a"><span class="a-text">Answer = </span><span class="answer" property="ef">[if(!Number.isNaN(((f - e) / e) * 100), ((f - e) / e) * 100 & "%","&nbsp;")]</span></p>
       </div>
     </div>
     <div id="aspect-ratio" class="block aspect-ratio">
@@ -89,30 +78,14 @@
       <div class="calc cf">
         <div class="three left">
           <p class="q">Old: <input type="number" id="numerator" property="ow" placeholder="width"/> x <input type="number" id="denominator"  property="oh" placeholder="height"/></p>
-          <p class="q">New: <input type="number" property="nw" value="[if((ow / oh) * nh > 0, (ow / oh) * nh, '')]" /> x <input type="number" property="nh" value="[if((oh / ow) * nw > 0, (oh / ow) * nw, '')]"/></p>
+          <p class="q">New: <input type="number" property="nw" mv-default="[if((ow / oh) * nh > 0, (ow / oh) * nh, '')]"/> x <input type="number" property="nh" mv-default="[if((oh / ow) * nw > 0, (oh / ow) * nw, '')]"/></p>
         </div>
-        <meta property="height" mv-value="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" mv-default="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" />
-        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left one" style="height:[height]px; line-height:[height]px">Aspect ratio: <span id="output"></span></div>
+        <meta property="height" mv-default="[if((oh / ow) * 200 > 0, (oh / ow) * 200, 0)]" />
+        <div class="[if((oh / ow) * 200 > 0, 'box', 'hidden')] left one" style="height:[height]px; line-height:[height]px">Aspect ratio: <span id="num-output" property="num-output"></span>:<span id="den-output" property="den-output"></span></div>
       </div>
     </div>
     <div class="mv-bar"></div>
     <script>
-      /* JS */
-      $('.diameter').on('change or keyup', function(){
-        var dia = $(this).val();
-        $('.radius').val(dia / 2);
-        $('.circ').text(dia * 3.14);
-        $('.rad').text(dia / 2);
-        $('.dia').text(dia);
-      });
-       $('.radius').on('change or keyup', function(){
-         var rad = $(this).val();
-         $('.diameter').val(rad * 2);
-         $('.circ').text(rad * 2 * 3.14);
-         $('.dia').text(rad * 2);
-         $('.rad').text(rad);
-      });
-
       function reduce(fraction) {
         for (var i = fraction[0]; i > 0; i--) {
           if (0 == fraction[0] % i && 0 == fraction[1] % i) {
@@ -126,7 +99,8 @@
         var numerator = document.getElementById("numerator").value;
         var denominator = document.getElementById("denominator").value;
         var fraction = reduce([numerator, denominator]);
-        document.getElementById("output").textContent = fraction[0] + ":" + fraction[1];
+        document.getElementById("num-output").textContent = fraction[0];
+        document.getElementById("den-output").textContent = fraction[1];
       });
       
       $('.svg-circumference, .circ-label, .circ-hover, .svg-circ-fat').hover(

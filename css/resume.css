@@ -1450,6 +1450,10 @@ input[type=checkbox] {
 .standard-resume .secondary .separator {
     padding: 0 6px;
 }
+.standard-resume .secondary a:hover {
+    text-decoration: underline;
+    text-decoration-color: #c8cacb;
+}
 .standard-resume .sr-section-items {
     list-style: none;
     padding: 0;

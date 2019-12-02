@@ -1843,11 +1843,15 @@ body {
     padding-bottom: 0px;
 }
 
-#skills {
-  margin-top: 100px;
+#skills, #education {
+  margin-top: 80px;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+    
+#footcardigan {
+    page-break-after: always;
+ }
 
 .standard-resume {
     margin-top: -0px !important;

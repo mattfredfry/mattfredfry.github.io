@@ -295,8 +295,20 @@ small {
   -webkit-flex: 2 0 0;
   flex: 2 0 0;
   max-width: 800px;
-  padding: 20px 0 0 0
+  padding: 20px 0 0 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between
 }
+
+.half {
+flex-basis: 49.5%;
+}
+
+.right-col a img {
+padding-bottom: 1%;
+}
+
 
 @media screen and (max-width: 1155px) {
   footer {

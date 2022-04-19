@@ -10,11 +10,10 @@ p {
   margin-top: 1.25em;
 }
 
-
 #title {
   display: flex;
   align-items: center;
-  margin-bottom: 2em
+  margin-bottom: 2em;
 }
 
 h1 {

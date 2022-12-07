@@ -1878,7 +1878,7 @@ body {
 
 .standard-resume .sr-section-item {
     margin-bottom: 30px;
-    page-break-inside: avoid;
+    /*page-break-inside: avoid;*/
 }
 
 .standard-resume .sr-section h3 {

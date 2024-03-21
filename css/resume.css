@@ -197,6 +197,10 @@ input[type=checkbox] {
     display: none;
   }
 
+#skills {
+    width: 100%;
+}
+
 /* columns container */
 .responsive-columns {
     display:flex;
@@ -1865,10 +1869,6 @@ body {
     font-size: 14px !important;
     margin-bottom: 0px;
     padding-bottom: 0px;
-}
-
-#skills {
-    width: 100%;
 }
 
 #skills, #education {

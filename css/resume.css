@@ -198,21 +198,20 @@ input[type=checkbox] {
   }
 
 /* columns container */
-.responsive-three-columns {
+.responsive-columns {
     display:flex;
     flex-wrap:wrap;
 }
 
 /* columns */
-.responsive-three-columns > * {
-    width:100%;
-    padding:1rem;
+.skill-column > * {
+    width:calc(100% / 4);
 }
 
 /* tablet breakpoint */
-@media (min-width:768px) {
-    .responsive-three-columns > * {
-        width:calc(100% / 3);
+@media (max-width:768px) {
+    .skill-column > * {
+        width:100%;
     }
 }
 
@@ -1501,7 +1500,6 @@ input[type=checkbox] {
     clear: both;
 }
 .standard-resume ul.tags li {
-    float: left;
     padding: 5px 18px;
     background-color: #f1f5f7;
     margin-right: 3px;

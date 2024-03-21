@@ -208,10 +208,14 @@ input[type=checkbox] {
 /* columns */
 .skill-column {
     width:calc(100% / 4);
+    padding-right: 5px;
 }
 
 /* tablet breakpoint */
 @media (min-width:768px) {
+    .skill-column {
+        padding-right: 0;
+    }
     .skill-column > * {
         width:100%;
     }
@@ -1863,10 +1867,19 @@ body {
     padding-bottom: 0px;
 }
 
+#skills {
+    width: 100%;
+}
+
 #skills, #education {
   margin-top: 80px;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+#skills h2 {
+    width: 580px;
+    margin: 72px auto 36px;
 }
     
 #footcardigan {

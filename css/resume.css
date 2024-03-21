@@ -206,7 +206,7 @@ input[type=checkbox] {
 }
 
 /* columns */
-.skill-column > * {
+.skill-column {
     width:calc(100% / 4);
 }
 

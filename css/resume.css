@@ -201,6 +201,11 @@ input[type=checkbox] {
     width: 100%;
 }
 
+#skills h2 {
+    width: 580px;
+    margin: 72px auto 36px;
+}
+
 /* columns container */
 .responsive-columns {
     display:flex;
@@ -1875,11 +1880,6 @@ body {
   margin-top: 80px;
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-#skills h2 {
-    width: 580px;
-    margin: 72px auto 36px;
 }
     
 #footcardigan {

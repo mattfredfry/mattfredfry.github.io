@@ -201,6 +201,8 @@ input[type=checkbox] {
 .responsive-columns {
     display:flex;
     flex-wrap:wrap;
+    width: 80vw;
+    margin: auto;
 }
 
 /* columns */
@@ -209,7 +211,7 @@ input[type=checkbox] {
 }
 
 /* tablet breakpoint */
-@media (max-width:768px) {
+@media (min-width:768px) {
     .skill-column > * {
         width:100%;
     }

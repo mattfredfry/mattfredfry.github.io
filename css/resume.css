@@ -230,6 +230,7 @@ input[type=checkbox] {
     }
     
     .skill-column {
+        width:calc(100% / 2);
         padding-right: 0;
     }
     .skill-column > * {

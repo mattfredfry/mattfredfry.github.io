@@ -254,6 +254,10 @@ input[type=checkbox] {
         width: auto;
     }
     
+    .responsive-columns {
+        width: auto;
+    }
+    
     .editor-content, .inner-wrap, .privacy-policy-wrap, .settings-wrap, .standard-resume .sr-section, .standard-resume>header {
         width: auto;
         margin-left: 20px;

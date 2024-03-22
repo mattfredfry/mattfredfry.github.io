@@ -222,6 +222,13 @@ input[type=checkbox] {
 
 /* tablet breakpoint */
 @media (min-width:768px) {
+    .responsive-columns {
+        display:flex;
+        flex-wrap:wrap;
+        width: 80vw;
+        margin: auto;
+    }
+    
     .skill-column {
         padding-right: 0;
     }
@@ -239,15 +246,19 @@ input[type=checkbox] {
   }
 }
 @media (max-width:620px) {
+    #skills {
+        width: auto;
+    }
+    
+    #skills h2 {
+        width: auto;
+    }
+    
     .editor-content, .inner-wrap, .privacy-policy-wrap, .settings-wrap, .standard-resume .sr-section, .standard-resume>header {
-    width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-}.outer-wrap {
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 @media (max-width:980px) {
     .outer-wrap {

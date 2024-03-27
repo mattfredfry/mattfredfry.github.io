@@ -221,7 +221,7 @@ input[type=checkbox] {
 }
 
 /* tablet breakpoint */
-@media (min-width:768px) {
+@media (max-width:768px) {
     .responsive-columns {
         display:flex;
         flex-wrap:wrap;

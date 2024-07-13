@@ -212,11 +212,11 @@ input[type=checkbox] {
     flex-wrap:wrap;
     width: 80vw;
     margin: auto;
+    column-count: 4;
 }
 
 /* columns */
 .skill-column {
-    width:calc(100% / 4);
     padding-right: 5px;
 }
 
@@ -227,10 +227,10 @@ input[type=checkbox] {
         flex-wrap:wrap;
         width: 80vw;
         margin: auto;
+        column-count: 2;
     }
     
     .skill-column {
-        width:calc(100% / 2);
         padding-right: 0;
     }
     .skill-column > * {
@@ -1962,6 +1962,7 @@ header > p > a {
 .menus-wrap, .preview-top-bar {
     display: none!important;
 }
+
 .section-highlights.tags li {
     background: 0 0!important;
     border: 1px solid #c9cccf;
